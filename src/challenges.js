@@ -136,21 +136,7 @@ function decode(string) {
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  if (array.length === 0) {
-    return 'Vazio!';
-  } else {
-    let arrayOrganizado = array.sort();
-    let resposta = [];
-
-    for (let i = 0; i < array.length; i+=) {
-      let tecnologias = {
-        tech: arrayOrganizado[i],
-        name: nome,
-      };
-      resposta.push(tecnologias);
-    }
-    return resposta;
-  }
+ 
 }
 
 module.exports = {
