@@ -136,9 +136,23 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(tech, name) {
+function techList(arr, nome) {
   // seu código aqui
- 
+  if (arr.length === 0) {
+    return 'Vazio!';
+  } else {
+    let arrOrganizado = arr.sort();
+    let resposta = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      let tecnologias = {
+        tech: arrOrganizado[i],
+        name: nome,
+      };
+      resposta.push(tecnologias);
+    }
+    return resposta;
+  }
 }
 
 module.exports = {
