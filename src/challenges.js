@@ -14,7 +14,6 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
@@ -35,7 +34,7 @@ function footballPoints(wins, ties) {
   } else if (wins === 1 && ties === 2) {
     return 5;
   } else if (wins === 0 && ties === 0) {
-    return 0
+    return 0;
   }
 }
 
@@ -60,18 +59,38 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
- if ((cat1 - mouse) * (cat1 - mouse) < (cat2 - mouse) * (cat2 - mouse)) {
-  return 'cat1';
- } else if ((cat1 - mouse) * (cat1 - mouse) > (cat2 - mouse) * (cat2 - mouse)) {
-  return 'cat2';
- } else if ((cat1 - mouse) * (cat1 - mouse) === (cat2 - mouse) * (cat2 - mouse)) {
-  return 'os gatos trombam e o rato foge';
- }
+  if ((cat1 - mouse) * (cat1 - mouse) < (cat2 - mouse) * (cat2 - mouse)) {
+    return 'cat1';
+  } else if (
+    (cat1 - mouse) * (cat1 - mouse) >
+    (cat2 - mouse) * (cat2 - mouse)
+  ) {
+    return 'cat2';
+  } else if (
+    (cat1 - mouse) * (cat1 - mouse) ===
+    (cat2 - mouse) * (cat2 - mouse)
+  ) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let result = [];
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numbers[i] % 3 === 0) {
+      result.push('fizz');
+    } else if (numbers[i] % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
