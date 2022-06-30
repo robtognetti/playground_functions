@@ -59,17 +59,19 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
-  if ((cat1 - mouse) * (cat1 - mouse) < (cat2 - mouse) * (cat2 - mouse)) {
+  let distCat1AndMouse = cat1 - mouse;
+  let distCat2AndMouse = cat2 - mouse;
+  if (distCat1AndMouse < 0) {
+    distCat1AndMouse = mouse - cat1;
+  }
+  if (distCat2AndMouse < 0) {
+    distCat2AndMouse = mouse - cat2;
+  }
+  if (distCat1AndMouse < distCat2AndMouse) {
     return 'cat1';
-  } else if (
-    (cat1 - mouse) * (cat1 - mouse) >
-    (cat2 - mouse) * (cat2 - mouse)
-  ) {
+  } else if (distCat1AndMouse > distCat2AndMouse) {
     return 'cat2';
-  } else if (
-    (cat1 - mouse) * (cat1 - mouse) ===
-    (cat2 - mouse) * (cat2 - mouse)
-  ) {
+  } else if (distCat1AndMouse === distCat2AndMouse) {
     return 'os gatos trombam e o rato foge';
   }
 }
